@@ -1,0 +1,24 @@
+<div>
+    <h1 class="parent-class">Parent Component! {{myData}}</h1>
+    <app-child-component [passedData]="parentData" (sendDataParents)="recivedDataFromChoild($event)"></app-child-component>
+</div>
+
+<h2>Drag and Drop Anywhere Example</h2>
+
+<div
+  class="draggable-box"
+  (mousedown)="startDrag($event)"
+  [style.left.px]="position.x"
+  [style.top.px]="position.y"
+>
+  🟩 Drag me anywhere
+</div>
+
+
+<!-- 
+<li *ngFor="let item of names | example:'an'">
+  {{ item }}
+</li> -->
+
+<h1>{{ email | example}}</h1>
+

@@ -1,0 +1,31 @@
+<div>
+    <h1 class="parent-class">ViewChild and ViewChildren</h1>
+    <p #highlight>Example text for viewChild</p>
+      <p #second>Example text for second</p>
+        <p #second>Example text for third</p>
+          <p #second>Example text for fourth</p>
+
+</div>
+<div>
+    <p>The value of child counter: {{child?.counter}}</p>
+    <button (click)="inc()">Inc</button>
+     <button (click)="dec()">Dec</button>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        
+            <app-child-example [saleProduct]="products" #childCounter>
+               <h1 #head class="header">Upto 70% off</h1>
+         <a class="link" href="">see more..</a>
+            </app-child-example>
+
+    </div>
+    <div class="col-md-6">
+         
+            <app-child-example [saleProduct]="topProduct" #childCounter>
+              <h1 #head class="header">clearance sale 70% off</h1>
+          <a class="link"  href="">see more..</a>
+            </app-child-example>
+    </div>
+</div>
+
